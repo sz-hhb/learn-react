@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { flushSync } from "react-dom";
 
 export class App extends Component {
   constructor() {
@@ -10,13 +11,14 @@ export class App extends Component {
   }
 
   changeText() {
-    // 3 setState在React的事件处理中是一个异步调用
-    // 如果希望在数据更新之后,获取到对应的结果执行一些逻辑代码
-    // 那么可以在setState中传入第二个参数: callback
-    this.setState({ message: "Hello React" }, () => {
-      console.log("+++++++", this.state.message);
-    });
-    console.log("-------", this.state.message);
+    setTimeout(() => {
+      // 在 React18 之前是同步操作
+      // 在 React18 之后是异步操作
+      flushSync(() => {
+        this.setState({ message: "Hello React" });
+      });
+      console.log(this.state.message);
+    }, 0);
   }
 
   changeCounter() {
