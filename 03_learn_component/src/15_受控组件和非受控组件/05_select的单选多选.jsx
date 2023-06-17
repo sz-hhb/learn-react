@@ -1,4 +1,4 @@
-import React, { PureComponent, createRef } from "react";
+import React, { PureComponent } from "react";
 
 export class App extends PureComponent {
   constructor() {
@@ -14,10 +14,7 @@ export class App extends PureComponent {
         { value: "rap", text: "rap", isChecked: false },
       ],
       fruit: ["orange"],
-      intro: "哈哈哈",
     };
-
-    this.introRef = createRef();
   }
 
   // handleUsernameChange(event) {
@@ -59,11 +56,10 @@ export class App extends PureComponent {
       .map((item) => item.value);
     console.log("爱好:", hobbies);
     console.log("水果:", this.state.fruit);
-    console.log("获取结果", this.introRef.current.value);
   }
 
   render() {
-    const { username, password, isAgree, hobbies, fruit, intro } = this.state;
+    const { username, password, isAgree, hobbies, fruit } = this.state;
 
     return (
       <div>
@@ -128,8 +124,6 @@ export class App extends PureComponent {
               <option value="orange">橘子</option>
               <option value="banana">香蕉</option>
             </select>
-
-            <input type="text" defaultValue={intro} ref={this.introRef} />
           </div>
           <button type="submit">submit</button>
         </form>
