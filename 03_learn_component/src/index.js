@@ -9,7 +9,8 @@ import ReactDOM from "react-dom/client";
 // import App from "./16_React高阶组件/App";
 // import App from "./17_React的Portals/App";
 // import App from "./18_React的fragment/App";
-import App from "./19_React的严格模式/App";
+// import App from "./19_React的严格模式/App";
+import App from "./20_React的动画实现/03_TransitionGroup/App";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(<App />);
