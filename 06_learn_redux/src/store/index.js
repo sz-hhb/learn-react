@@ -25,4 +25,20 @@ const reducer = combineReducers({
 
 const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)));
 
+// function thunk(store) {
+//   const next = store.dispatch;
+
+//   function dispatchThunk(action) {
+//     if (typeof action === "function") {
+//       next(store.dispatch, store.getState);
+//     } else {
+//       next(action);
+//     }
+//   }
+
+//   store.dispatch = dispatchThunk;
+// }
+
+// thunk(store);
+
 export default store;
