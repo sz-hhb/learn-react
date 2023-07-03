@@ -1,11 +1,19 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
-import { getHomeGoodPriceInfoData } from "@/services/modules/home";
+import {
+  getHomeGoodPriceInfoData,
+  getHomeHighScoreInfoData,
+} from "@/services/modules/home";
 
-export const fetchHomeGoodPriceInfoAction = createAsyncThunk(
+export const fetchHomeDataAction = createAsyncThunk(
   "fetchdata",
-  async () => {
-    const res = await getHomeGoodPriceInfoData();
-    return res;
+  // 第二个参数是store对象
+  (payload, { dispatch, getState }) => {
+    getHomeGoodPriceInfoData().then((res) => {
+      dispatch(changeGoodPriceInfoAction(res));
+    });
+    getHomeHighScoreInfoData().then((res) => {
+      dispatch(changeHighScoreInfoAction(res));
+    });
   }
 );
 
@@ -13,16 +21,24 @@ const homeSlice = createSlice({
   name: "home",
   initialState: {
     goodPriceInfo: {},
+    highScoreInfo: {},
   },
-  reducers: {},
-  extraReducers: (builder) => {
-    builder.addCase(
-      fetchHomeGoodPriceInfoAction.fulfilled,
-      (state, { payload }) => {
-        state.goodPriceInfo = payload;
-      }
-    );
+  reducers: {
+    changeGoodPriceInfoAction(state, { payload }) {
+      state.goodPriceInfo = payload;
+    },
+    changeHighScoreInfoAction(state, { payload }) {
+      state.highScoreInfo = payload;
+    },
   },
+  // extraReducers: (builder) => {
+  //   builder.addCase(fetchHomeDataAction.fulfilled, (state, { payload }) => {
+  //     state.goodPriceInfo = payload;
+  //   });
+  // },
 });
+
+export const { changeGoodPriceInfoAction, changeHighScoreInfoAction } =
+  homeSlice.actions;
 
 export default homeSlice.reducer;
