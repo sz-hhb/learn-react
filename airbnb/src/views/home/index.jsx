@@ -5,18 +5,22 @@ import { fetchHomeDataAction } from "@/store/modules/home";
 import { HomeWrapper } from "./style";
 import HomeBanner from "./c-cpns/home-banner";
 import HomeSectionV1 from "./c-cpns/home-section-v1";
+import HomeSectionV2 from "./c-cpns/home-section-v2";
+import { isEmptyO } from "@/utils";
 
 const Home = memo(() => {
-  const { goodPriceInfo, highScoreInfo } = useSelector(
-    (state) => ({
-      goodPriceInfo: state.home.goodPriceInfo,
-      highScoreInfo: state.home.highScoreInfo,
-    }),
-    shallowEqual
-  );
+  const { goodPriceInfo, highScoreInfo, discountInfo, recommendInfo } =
+    useSelector(
+      (state) => ({
+        goodPriceInfo: state.home.goodPriceInfo,
+        highScoreInfo: state.home.highScoreInfo,
+        discountInfo: state.home.discountInfo,
+        recommendInfo: state.home.recommendInfo,
+      }),
+      shallowEqual
+    );
 
   const dispatch = useDispatch();
-
   useEffect(() => {
     dispatch(fetchHomeDataAction());
   }, [dispatch]);
@@ -25,8 +29,10 @@ const Home = memo(() => {
     <HomeWrapper>
       <HomeBanner />
       <div className="content">
-        <HomeSectionV1 infoData={goodPriceInfo} />
-        <HomeSectionV1 infoData={highScoreInfo} />
+        {isEmptyO(discountInfo) && <HomeSectionV2 infoData={discountInfo} />}
+        {isEmptyO(recommendInfo) && <HomeSectionV2 infoData={recommendInfo} />}
+        {isEmptyO(goodPriceInfo) && <HomeSectionV1 infoData={goodPriceInfo} />}
+        {isEmptyO(highScoreInfo) && <HomeSectionV1 infoData={highScoreInfo} />}
       </div>
     </HomeWrapper>
   );
