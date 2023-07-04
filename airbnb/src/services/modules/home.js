@@ -15,3 +15,7 @@ export function getHomeDiscountInfoData() {
 export function getHomeRecommendInfoData() {
   return hyRequest.get({ url: "/home/hotrecommenddest" });
 }
+
+export function getHomeLongforInfoData() {
+  return hyRequest.get({ url: "/home/longfor" });
+}

@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const TabsWrapper = styled.div`
-  display: flex;
   .item {
     flex-basis: 120px;
     flex-shrink: 0;
