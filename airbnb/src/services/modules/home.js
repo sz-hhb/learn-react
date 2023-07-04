@@ -19,3 +19,7 @@ export function getHomeRecommendInfoData() {
 export function getHomeLongforInfoData() {
   return hyRequest.get({ url: "/home/longfor" });
 }
+
+export function getHomePlusInfoData() {
+  return hyRequest.get({ url: "/home/plus" });
+}

@@ -15,7 +15,6 @@ const ScrollView = memo((props) => {
     const clientWidth = scrollContentRef.current.clientWidth;
     const totalDistance = scrollWidth - clientWidth;
     totalDistanceRef.current = totalDistance;
-    console.log(scrollWidth, clientWidth, totalDistance);
     setShowRight(totalDistance > 0);
   }, [props.children]);
 
