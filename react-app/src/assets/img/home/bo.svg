@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>图标/100*100/Bo</title>
+    <defs>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-1">
+            <stop stop-color="#2DBBFF" offset="0%"></stop>
+            <stop stop-color="#AE44FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="产品详情2" transform="translate(-355, -4608)">
+            <g id="编组-27" transform="translate(0, 4380)">
+                <g id="编组-26" transform="translate(240, 188)">
+                    <g id="图标/100*100/Bo" transform="translate(115, 40)">
+                        <circle id="椭圆形" stroke-opacity="0.3" stroke="#8955FA" stroke-width="3" fill="#FFFFFF" cx="50" cy="50" r="48.5"></circle>
+                        <path d="M49.828676,24 L61.9531422,30.9736842 L61.9531422,44.9210526 L49.828676,51.8947368 L37.7009152,44.9210526 L37.7009152,30.9736842 L49.8253813,24 L49.828676,24 Z M64.8755339,49.1052632 L77,56.0789474 L77,70.0263158 L64.8821232,77 L52.7576571,70.0263158 L52.7576571,56.0789474 L64.8755339,49.1052632 Z M35.1211715,49.1052632 L47.2456376,56.0789474 L47.2456376,70.0263158 L35.1244661,77 L23,70.0263158 L23,56.0789474 L35.1244661,49.1052632 L35.1211715,49.1052632 Z" id="形状" fill="url(#linearGradient-1)" fill-rule="nonzero"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

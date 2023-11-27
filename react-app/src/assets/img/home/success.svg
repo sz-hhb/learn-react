@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="80px" height="80px" viewBox="0 0 80 80" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>图标/80*80/成功</title>
+    <defs>
+        <linearGradient x1="26.6662074%" y1="106.141056%" x2="25.4368271%" y2="-26.8594305%" id="linearGradient-1">
+            <stop stop-color="#3DDCFF" offset="0%"></stop>
+            <stop stop-color="#A666FF" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="页面-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="弹窗" transform="translate(-325, -201)">
+            <g id="编组" transform="translate(125, 161)">
+                <g id="编组-2" transform="translate(200, 40)">
+                    <circle id="椭圆形" fill="url(#linearGradient-1)" fill-rule="nonzero" cx="40" cy="40" r="40"></circle>
+                    <g id="编组" transform="translate(11.0002, 20.0613)" fill="#FFFFFF">
+                        <rect id="矩形" transform="translate(11.6673, 30.052) rotate(-315) translate(-11.6673, -30.052)" x="-2.33273811" y="27.5520382" width="28" height="5" rx="2.5"></rect>
+                        <rect id="矩形" transform="translate(37.14, 20.8597) rotate(-45) translate(-37.14, -20.8597)" x="10.139979" y="18.35965" width="54" height="5" rx="2.5"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
