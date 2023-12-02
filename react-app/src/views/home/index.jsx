@@ -2,10 +2,13 @@ import { memo } from "react"
 import { HomeWrapper } from "./style"
 import { Col, Row } from "antd"
 import img from "@/assets/img/home/recom-info1.png"
+import HomeForm from "./cpns/home-form"
+import HomeBanner from "./cpns/home-banner"
 
 const Home = memo(() => {
   return (
     <HomeWrapper>
+      <HomeBanner />
       <div className="container">
         <Row>
           <Col span={24}>
@@ -44,6 +47,7 @@ const Home = memo(() => {
           </Col>
         </Row>
       </div>
+      <HomeForm />
     </HomeWrapper>
   )
 })
