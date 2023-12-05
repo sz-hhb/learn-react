@@ -1,0 +1,50 @@
+1. npm i create-react-app
+
+2.配置项目的 icon 标题 jsconfig.json
+
+3.通过craco配置别名和less文件 npm i @craco/craco -D npm i craco-less@2.1.0-alpha.0 -D
+
+配置craco.config.js 文件:
+const { resolve } = require("path");
+const CracoLessPlugin = require("craco-less");
+
+module.exports = {
+  plugins: [
+    {
+      plugin: CracoLessPlugin,
+    },
+  ],
+  webpack: {
+    alias: {
+      "@": resolve(__dirname, "src"),
+      //"@mui/styled-engine": "@mui/styled-engine-sc",
+    },
+  },
+};
+
+
+4.项目目录结构: 
+assets: img css; base-ui;components;hooks;router;services;store;utils;views;
+
+5.样式重置
+normalize.css npm i normalize.css => import "normalize.css"
+reset.css
+variables.css
+
+6. router配置 npm i react-router-dom
+index.js 中配置 HashRouter 或 BrowserRouter;
+router的index.js 中配置 routes; 异步加载组件(React.lazy())并在index.js中配置Suspense
+App.jsx 中使用useRoutes(routes)
+
+7. redux状态管理 npm i @reduxjs/toolkit    npm i react-redux
+普通方式 或者 RTK方式
+
+8.axios配置 npm i axios
+
+9.css: npm i styled-components
+
+10. ant design || material ui 
+npm install @mui/material @emotion/react @emotion/styled
+npm install @mui/material @mui/styled-engine-sc styled-components
+
+npm install antd --save
